@@ -16,3 +16,38 @@ print(grey_image)
 
 ### turn a numpy array into an image ###
 cv2.imwrite("new_image.png", grey_image)
+
+
+
+
+
+
+
+### indexing, slicing, and iterating numpy arrays ###
+first_two_rows = grey_image[0:2]
+print(first_two_rows)
+
+two_rows_and_two_columns = grey_image[0:2, 2:4]
+print(two_rows_and_two_columns)
+
+shape = grey_image.shape
+print(shape) # prints the dimensions of the image, in this case (3, 5)
+
+for row in grey_image:
+    print(row)
+
+for column in grey_image.T:
+    print(column)
+
+for pixel in grey_image.flat:
+    print(pixel)
+
+
+
+
+
+
+
+### stacking and splitting numpy arrays ###
+
+
