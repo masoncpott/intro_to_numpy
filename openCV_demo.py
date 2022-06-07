@@ -49,5 +49,12 @@ for pixel in grey_image.flat:
 
 
 ### stacking and splitting numpy arrays ###
+horizontal_array = numpy.hstack((grey_image, grey_image, grey_image, grey_image)) # horizontally stack arrays, pass in a tuple
+print(horizontal_array)
+cv2.imwrite("horizontal_array.png", horizontal_array)
 
+vertical_array = numpy.vstack((grey_image, grey_image, grey_image, grey_image))
+cv2.imwrite("veritacal_array.png", vertical_array)
 
+split_arrays = numpy.hsplit(vertical_array, 5)
+print(split_arrays)
